@@ -1,5 +1,6 @@
 let portfolioContainer = document.getElementById("portfolioContainer");
 
+// Function that fetches the websites and writes them out
 function portfolioWriter(){
     fetch(restURLWebsites)
     .then((res)=> res.json())

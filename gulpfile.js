@@ -3,6 +3,7 @@ const{src, dest, watch, series, parallel} = require("gulp");
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('node-sass'));
 const sourcemaps = require('gulp-sourcemaps');
+const javascriptObfuscator = require('gulp-javascript-obfuscator');
 
 // Declares search paths to files
 const files={
@@ -39,12 +40,14 @@ function copySCSS(){
 function copyConcJS(){
     return src(files.jsConcPath)
     .pipe(concat('main.js'))
+    .pipe(javascriptObfuscator())
     .pipe(dest('pub/js'))
 };
 
 //Task to  move nonConcated Javascript-files
 function copyJS(){
     return src(files.jsPath)
+    .pipe(javascriptObfuscator())
     .pipe(dest('pub/js'))
 };
 

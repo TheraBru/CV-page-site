@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a4e1bec0fb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png"/>
     <title>Therese Bruzell</title>
 </head>
 <body>
-    <header>
-        <img src="images/About.svg" alt="logga" id="logga">
+    <header id="headerID">
+        <a href="#headerID"><img src="images/About.svg" alt="logga" id="logga"></a> 
         <h1>Therese Bruzell</h1>
         <h2>Webbutvecklare</h2>
     </header>
     <nav>
         <ul>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li aria-hidden="true" >|</li>
             <li><a href="#cv">Curriculum Vitae</a></li>
         </ul>
     </nav>
@@ -58,7 +60,7 @@
             <p>therese.bruzell@hotmail.com</p>
             <p>076-833 53 92</p>
         </div>
-        <p>Site created by Therese Bruzell</p>
+        <p id="copyText">Site created by Therese Bruzell</p>
     </footer>
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>

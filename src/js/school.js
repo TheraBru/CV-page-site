@@ -1,6 +1,6 @@
 let schoolContainer = document.getElementById("schoolContainer");
 
-
+// Function that fetches schools and writes them out
 function writeSchool(){
     fetch(restURLSchool)
     .then((res)=> res.json())
